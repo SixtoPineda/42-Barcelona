@@ -1,0 +1,5 @@
+Credentials cache: API:6EFB93BB-D594-4A3A-BD23-2621465C4F29
+        Principal: spineda-@42BARCELONA.COM
+
+  Issued                Expires               Principal
+Dec  1 09:15:57 2021  Dec  1 19:15:57 2021  krbtgt/42BARCELONA.COM@42BARCELONA.COM
