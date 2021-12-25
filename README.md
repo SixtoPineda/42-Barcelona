@@ -9,7 +9,7 @@ The cursus 42 is totally free for those who are selected by passing a series of 
 
 ## Curriculum
 
-The following table shows the different projects carried out during the December 2021 Piscine in 42 Barcelona and their results.
+The following table shows the different projects carried out during the December 2021 Piscine in 42 Barcelona and their results. (Take it as a reference, do not copy if you do not understand. )
 
 |#	|PROJECT							|LANGUAGE		|EXPERIENCE	|STATUS						|
 |:-:|:--								|:-:		|--:		|--:						|
