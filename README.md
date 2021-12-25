@@ -4,3 +4,6 @@ This repository contains coding projects carried out at [42 Barcelona](https://w
 
 42 is an initiative that bets on a different learning methodology: without teachers, without classrooms, students learn how to learn and they also do it hand in hand with their peers (peer to peer learning), all with a focus on the world of technology and computer science.
 The cursus 42 is totally free for those who are selected by passing a series of tests: two online exams and the "C piscine", a C programming bootcamp of approximately 26 days. The latter is the decisive step to enter cursus 42 as a student.
+
+[![Photo of a 42 Barcelona lab and ex](42barcelona.jpg)](https://github.com/SixtoPineda/42-Barcelona/blob/main/Readmaterial/Portada.png)
+
