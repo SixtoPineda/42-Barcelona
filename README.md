@@ -9,7 +9,7 @@ The cursus 42 is totally free for those who are selected by passing a series of 
 
 ## Curriculum
 
-The table below presents the C Piscine's curriculum in chronological order in which it was completed by me - order of completed subjects and corresponding attained level may vary among students.
+The following table shows the different projects carried out during the December 2021 Piscine in 42 Barcelona and their results.
 
 |#	|PROJECT							|LANGUAGE		|EXPERIENCE	|STATUS						|
 |:-:|:--								|:-:		|--:		|--:						|
@@ -22,7 +22,22 @@ The table below presents the C Piscine's curriculum in chronological order in wh
 |06	|[C 04](./C/C-04)			|C			|100 XP		|100% :heavy_check_mark:	|
 |07	|C 05		|C			|100 XP		|-  |
 |08	|[C 06](./C/C-06)			|C			|100 XP		|100% :heavy_check_mark:	|
-|09	|[Rush 00](./Rush/Rush00)		|C			|150 XP		|100% :heavy_check_mark:	|
-|10	|[Rush 01](./Rush/Rush01)		|C			|150 XP		|0% :x:						|
-|11	|[Rush 02](./Rush/Rush02)		|C			|150 XP		|74% :heavy_check_mark:	|
-|12	|[Bsq](./Bsq)		|C			|150 XP		|100% :heavy_check_mark:	|
+
+## Rushes
+
+|#	|PROJECT							|LANGUAGE		|EXPERIENCE	|STATUS						|
+|:-:|:--								|:-:		|--:		|--:						|
+|00	|[Rush 00](./Rush/Rush00)		|C			|150 XP		|100% :heavy_check_mark:	|
+|01	|[Rush 01](./Rush/Rush01)		|C			|150 XP		|0% :x:						|
+|02	|[Rush 02](./Rush/Rush02)		|C			|150 XP		|74% :heavy_check_mark:	|
+|03	|[Bsq](./Bsq)		|C			|150 XP		|100% :heavy_check_mark:	|
+
+## Exams
+
+|  ##  |  NAME |LANGUAGE		 |	       GRADE	      |
+|:----:|:-------|:-:		|:-------------------:|
+|  00  | Exam 00 |C				|48% :heavy_check_mark:	|
+|  01  | Exam 01 |C				|48% :heavy_check_mark:	|
+|  02  | Exam 02 |C				|70% :heavy_check_mark:	|
+|  03  | Final Exam |C			 |66% :heavy_check_mark:	|
+
