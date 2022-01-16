@@ -28,7 +28,7 @@
 
 #include <stdio.h>
 
-static void	*clear_list(t_list **list, void (*del)(void *))
+static void	*clear_list(t_list *list, void (*del)(void *))
 {
 	ft_lstclear(&list, del);
 	return (NULL);
