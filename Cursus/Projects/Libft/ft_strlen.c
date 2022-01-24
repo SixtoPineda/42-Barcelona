@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 13:06:24 by spineda-          #+#    #+#             */
-/*   Updated: 2022/01/10 13:06:25 by spineda-         ###   ########.fr       */
+/*   Updated: 2022/01/24 00:12:07 by syxtyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
 

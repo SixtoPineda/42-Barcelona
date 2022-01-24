@@ -21,8 +21,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	cs1 = (unsigned char *)s1;
 	cs2 = (unsigned char *)s2;
 	i = 0;
-	while ((cs1[i] == cs2[i])
-		&& (cs1[i] != '\0') && (cs2[i] != '\0') && (i < n))
+	if (cs1[i] == '\0')
+		write(1, "hh", 2);
+	while ((cs1[i] == cs2[i]) && (i < n))
 	{
 		i++;
 	}

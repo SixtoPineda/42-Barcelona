@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 15:49:44 by spineda-          #+#    #+#             */
-/*   Updated: 2022/01/11 15:49:45 by spineda-         ###   ########.fr       */
+/*   Updated: 2022/01/22 21:49:16 by syxtyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memmove(void *dest, const void *src, size_t size)
 	i = 0;
 	if (size != 0)
 	{
-		while (csrc[i])
+		while (i < size)
 		{
 			temp[i] = csrc[i];
 			i++;

@@ -6,7 +6,7 @@
 /*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 15:26:02 by spineda-          #+#    #+#             */
-/*   Updated: 2022/01/15 22:18:40 by syxtyn           ###   ########.fr       */
+/*   Updated: 2022/01/24 15:29:05 by syxtyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 /*-------------------------Header------------------------------------*/
 # include <stdlib.h>
-# include <sys/stat.h> //necesario para usar write
-//#include <unistd.h>
+//# include <sys/stat.h> //necesario para usar write
+# include <unistd.h>
 /*-----------------------Struct Bonus------------------------------------*/
 typedef struct s_list
 {
@@ -41,7 +41,7 @@ void	*ft_memmove(void *dest, const void *src, size_t size);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 
-int		ft_strlen(char *str);
+int		ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
@@ -51,8 +51,11 @@ char	*ft_strrchr(const char *str, int ch);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);

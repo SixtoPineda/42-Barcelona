@@ -43,7 +43,7 @@ static int	num_strs(char const *s, char c)
 	return (num_str);
 }
 
-static int	get_pos(int *i, char const *s, char c)
+static int	get_pos(int *i, char const *s, char c, int *f)
 {
 	int	final;
 
@@ -54,6 +54,7 @@ static int	get_pos(int *i, char const *s, char c)
 	final = *i;
 	while ((char)s[final] != c && s[final])
 		final++;
+	*f = final;
 	return (final);
 }
 
@@ -76,6 +77,32 @@ static char	*get_string(int i, int final, char const *s)
 	return (str);
 }
 
+/* static char	**empty(char ***m, int i, int num_str)
+{
+	int	j;
+	int	k;
+
+	j = 0;
+	if (i == 0)
+	{
+		free(m[0]);
+	}
+	else
+	{
+		while (m[0][j])
+		{
+			k = 0;
+			while (m[0][j][k])
+			{
+				free(m[0][j][k++]);
+			}
+			free(m[0][j++]);
+		}
+		free(m[0]);
+	}
+	return (NULL);
+} */
+
 char	**ft_split(char const *s, char c)
 {
 	int		num_str;
@@ -93,10 +120,12 @@ char	**ft_split(char const *s, char c)
 	num_str = 0;
 	while (s[i])
 	{
-		final = get_pos(&i, s, c);
-		if (final < 0)
+		if (get_pos(&i, s, c, &final) < 0)
 			break ;
-		m[num_str++] = get_string(i, final, s);
+		m[num_str] = get_string(i, final, s);
+		if (m[num_str] == NULL)
+			return (NULL);
+		num_str++;
 		i = final;
 	}
 	m[num_str++] = NULL;

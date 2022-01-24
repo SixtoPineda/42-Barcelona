@@ -12,13 +12,32 @@
 
 #include "libft.h"
 
+static int	check_val(int val)
+{
+	int	aux;
+
+	aux = val / 256;
+	if (val > 0)
+	{
+		while (aux > 0)
+		{
+			val = val - 256;
+			aux--;
+		}
+	}
+	return (val);
+}
+
 char	*ft_strchr(const char *str, int val)
 {
+	val = check_val(val);
 	while (*str)
 	{
-		if ((int)*str == val)
+		if (*str == val)
 			return ((char *)str);
 		str++;
 	}
+	if (*str == val)
+		return ((char *)str);
 	return (NULL);
 }

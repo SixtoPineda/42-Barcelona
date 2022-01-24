@@ -3,91 +3,51 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 13:07:17 by spineda-          #+#    #+#             */
-/*   Updated: 2022/01/10 13:07:19 by spineda-         ###   ########.fr       */
+/*   Updated: 2022/01/24 22:06:58 by syxtyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	check_spaces(char *str)
-{
-	int	i;
-
-	i = 0;
-	if (str[0] != ' ' && !(str[0] >= '\t' && str[0] <= '\r'))
-		return (i);
-	while (str[i])
-	{
-		if (str[i] == '-' || str[i] == '+'
-			|| ((str[i] >= '0') && (str[i] <= '9')))
-		{
-			return (i);
-		}	
-		i++;
-	}
-	return (i);
-}
-
-static int	chec_sign(char *str, int *sign, int i)
-{
-	while (str[i])
-	{
-		if ((str[i] >= '0') && (str[i] <= '9'))
-			return (i);
-		if (str[i] == '-')
-			*sign = -1 * (*sign);
-		if (str[i] == ' ')
-			return (-1);
-		i++;
-	}
-	return (i);
-}
-
-static int	end_number(char *str, int i)
-{
-	while (str[i])
-	{
-		if (!(str[i] >= '0' && str[i] <= '9'))
-			return (i - 1);
-		i++;
-	}
-	return (i - 1);
-}
-
-static int	char_to_int(char *str, int i, int max)
-{
-	int	num;
-
-	num = 0;
-	while (i <= max)
-	{
-		num = (num * 10) + (str[i] - '0');
-		i++;
-	}
-	return (num);
-}
+/*
+	- Iterate while we see ' '(spaces) or tabs...
+	- if we find a sign, check if it's negative to return
+		the final int with "int * -1" and go to next pos with i++
+		
+	"while ((str[i] >= '0') && (str[i] <= '9'))"
+		+ in case is other char we don't do the "while" an return "0 * sign"
+		+ in case is a number iterate and sum the num t
+			o "num * 10" for correct pos of number
+ */
 
 int	ft_atoi(const char *nptr)
 {
 	int				i;
-	int				max;
 	int				sign;
+	int				num;
 	unsigned char	*str;
 
 	str = (unsigned char *)nptr;
 	sign = 1;
-	if (str[0] == ' ' || str[0] == '-' || (str[0] >= '\t' && str[0] <= '\r')
-		|| str[0] == '+' || ((str[0] >= '0') && (str[0] <= '9')))
+	num = 0;
+	i = 0;
+	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
 	{
-		i = check_spaces((char *)str);
-		i = chec_sign((char *)str, &sign, i);
-		if (i < 0)
-			return (0);
-		max = end_number((char *)str, i);
-		return (char_to_int((char *)str, i, max) * sign);
+		i++;
 	}
-	return (0);
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while ((str[i] >= '0') && (str[i] <= '9'))
+	{
+		num = (num * 10) + (str[i] - '0');
+		i++;
+	}
+	return (num * sign);
 }

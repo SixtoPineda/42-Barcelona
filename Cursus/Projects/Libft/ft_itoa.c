@@ -95,14 +95,22 @@ static char	*int_to_char(int n, int numdig, int sign)
 
 char	*ft_itoa(int n)
 {
-	int	sign;
-	int	aux;
-	int	numdig;
+	int		sign;
+	int		aux;
+	int		numdig;
+	char	*str;
 
 	numdig = 0;
 	sign = 1;
 	if (n == 0)
-		return ("0");
+	{
+		str = (char *) malloc((2) * sizeof(char));
+		if (str == NULL)
+			return (NULL);
+		str[0] = 48;
+		str[1] = '\0';
+		return (str);
+	}
 	else if (n < 0)
 		sign = sign * -1;
 	aux = n;

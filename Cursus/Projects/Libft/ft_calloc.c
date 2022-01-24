@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 13:05:21 by spineda-          #+#    #+#             */
-/*   Updated: 2022/01/12 13:05:23 by spineda-         ###   ########.fr       */
+/*   Updated: 2022/01/24 14:56:38 by syxtyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	arr = (char *)malloc(nmemb * size);
 	if (arr == NULL)
 		return (NULL);
-	while (i < nmemb)
+	while (i < (nmemb * size))
 	{
-		arr[i] = '\0';
+		arr[i] = 0;
 		i++;
 	}
 	return ((void *)arr);

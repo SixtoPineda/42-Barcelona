@@ -20,8 +20,6 @@
 		so, we make it to point to the "new" element.
 */
 
-#include <stdio.h>
-
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*current;
@@ -29,7 +27,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	current = *lst;
 	if (new != NULL)
 	{
-		if (lst == NULL)
+		if (*lst == NULL)
 			*lst = new;
 		else
 		{
