@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 22:16:39 by syxtyn            #+#    #+#             */
-/*   Updated: 2022/01/15 22:16:39 by syxtyn           ###   ########.fr       */
+/*   Created: 2022/01/25 14:16:52 by spineda-          #+#    #+#             */
+/*   Updated: 2022/01/25 14:16:57 by spineda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 	size_t	size;
 
-	if (s[0] == 0 || len == 0 || start > ft_strlen(s))
+	if (s[0] == 0 || len == 0 || start > (unsigned int)ft_strlen(s))
 	{
 		str = (char *) malloc(1 * sizeof(char));
+		if (str == NULL)
+			return (NULL);
+		str[0] = '\0';
 		return (str);
 	}
-	if (len > ft_strlen(s))
+	if ((int)len > ft_strlen(s))
 		size = ft_strlen(s) + 1 - start;
 	else if (ft_strlen(s) - start < len)
 		size = (ft_strlen(s) - start) + 1;
@@ -56,12 +59,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str = strcpylen(str, s, start, size - 1);
 	return (str);
 }
-
-/* 
-
-int main()
-{
-	// res = test_single_substr("hola", 0, -1, "hola") && res;
-
-	printf("%s\n\n",ft_substr("hola", 0, -1));
-} */

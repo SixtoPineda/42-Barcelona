@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 22:17:38 by syxtyn            #+#    #+#             */
-/*   Updated: 2022/01/15 22:17:38 by syxtyn           ###   ########.fr       */
+/*   Created: 2022/01/25 13:53:01 by spineda-          #+#    #+#             */
+/*   Updated: 2022/01/25 13:53:07 by spineda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@
 		repeat code
 */
 
-#include <stdio.h>
-
 static void	*clear_list(t_list *list, void (*del)(void *))
 {
 	ft_lstclear(&list, del);
@@ -44,10 +42,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	new_list = NULL;
 	while (current != NULL)
 	{
-		current->content = f(current->content);
-		if (current->content == NULL)
-			return (clear_list(new_list, del));
-		element_list = ft_lstnew(current->content);
+		element_list = ft_lstnew(f(current->content));
 		if (element_list == NULL)
 			return (clear_list(new_list, del));
 		ft_lstadd_back(&new_list, element_list);

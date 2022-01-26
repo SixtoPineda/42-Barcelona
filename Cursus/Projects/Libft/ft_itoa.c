@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 22:11:17 by syxtyn            #+#    #+#             */
-/*   Updated: 2022/01/15 22:11:17 by syxtyn           ###   ########.fr       */
+/*   Created: 2022/01/25 13:50:21 by spineda-          #+#    #+#             */
+/*   Updated: 2022/01/25 13:50:28 by spineda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ static char	obtain_digit(int n, int numdig, int *j, int aux)
 		cont++;
 	}
 	dig = (n % (numodul * 10)) / numodul;
+	*j = *j - 1;
 	return (dig + '0');
 }
 
@@ -48,19 +49,19 @@ static int	check_int(int n, char *str, int *i, int sign)
 	{
 		str[0] = '-';
 		str[1] = '2';
-		*i = *i + 2;
+		*i = 2;
 		return (147483648);
 	}
 	else if (n == 2147483647)
 	{
 		str[0] = '2';
-		*i = *i + 1;
+		*i = 1;
 		return (147483647);
 	}
 	else if (sign < 0)
 	{
 		str[0] = '-';
-		*i = *i + 1;
+		*i = 1;
 		return (-n);
 	}
 	return (n);
@@ -88,7 +89,7 @@ static char	*int_to_char(int n, int numdig, int sign)
 		aux = 2;
 	}
 	while (i < numdig)
-		str[i] = obtain_digit(n, new_numdig, &i, aux);
+		str[i++] = obtain_digit(n, new_numdig, &i, aux);
 	str[i] = '\0';
 	return (str);
 }
@@ -121,18 +122,3 @@ char	*ft_itoa(int n)
 	}
 	return (int_to_char(n, numdig, sign));
 }
-
-// #include <stdio.h>
-
-// int main()
-// {
-// 	char *s;
-// 	s = ft_itoa(251);
-// 	printf("251: %s\n", s);
-// 	s = ft_itoa(-251);
-// 	printf("-251: %s\n", s);
-// 	s = ft_itoa(2147483647);
-// 	printf("2147483647: %s\n", s);
-// 	s = ft_itoa(-2147483648);
-// 	printf("-2147483648: %s\n", s);
-// }

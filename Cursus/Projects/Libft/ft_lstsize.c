@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 22:20:45 by syxtyn            #+#    #+#             */
-/*   Updated: 2022/01/15 22:20:45 by syxtyn           ###   ########.fr       */
+/*   Created: 2022/01/25 13:53:36 by spineda-          #+#    #+#             */
+/*   Updated: 2022/01/25 13:53:43 by spineda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,28 +31,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (cont);
 }
-
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	t_list *list;
-// 	t_list *new;
-// 	int i = 25;
-
-// 	//Create the two lists
-// 	list = ft_lstnew("hola");
-// 	new = ft_lstnew(&i);
-
-// 	ft_lstadd_front(&list, new); //add the new lits to list "list" 
-
-// 	printf("%d\n", *((int*)(list->content)));
-// 	printf("%s\n", ((char*)(list->next->content)));
-
-// 	//obtain the number of lists (2)
-// 	printf("Size list: %d\n", ft_lstsize(list));
-// 	//obtain the number of lists if is NULL (0)
-// 	list = NULL;
-// 	printf("Size list: %d", ft_lstsize(list));
-// 	return (0);
-// }

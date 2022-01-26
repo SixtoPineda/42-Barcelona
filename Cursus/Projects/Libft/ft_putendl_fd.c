@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 22:07:47 by syxtyn            #+#    #+#             */
-/*   Updated: 2022/01/15 22:07:47 by syxtyn           ###   ########.fr       */
+/*   Created: 2022/01/25 13:54:38 by spineda-          #+#    #+#             */
+/*   Updated: 2022/01/25 13:54:46 by spineda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,3 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }
-
-/* #include <stdio.h>
-
-int		main(void)
-{
-	ft_putendl_fd("hola", 2);
-	return (0);
-} */

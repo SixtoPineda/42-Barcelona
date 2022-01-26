@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 22:21:39 by syxtyn            #+#    #+#             */
-/*   Updated: 2022/01/15 22:21:39 by syxtyn           ###   ########.fr       */
+/*   Created: 2022/01/25 13:51:34 by spineda-          #+#    #+#             */
+/*   Updated: 2022/01/25 13:51:40 by spineda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,13 @@
 	- Put null the list.
 */
 
-#include <stdio.h>
-
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*current;
 	t_list	*aux;
 
 	current = *lst;
-	while (current->next != NULL)
+	while (current != NULL)
 	{
 		aux = current;
 		ft_lstdelone(current, del);

@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	cdest = (unsigned char *)dest;
 	csrc = (unsigned char *)src;
 	i = 0;
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	while (i < n)
 	{
 		cdest[i] = csrc[i];

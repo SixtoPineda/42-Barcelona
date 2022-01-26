@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 22:09:38 by syxtyn            #+#    #+#             */
-/*   Updated: 2022/01/15 22:09:38 by syxtyn           ###   ########.fr       */
+/*   Created: 2022/01/25 13:54:19 by spineda-          #+#    #+#             */
+/*   Updated: 2022/01/25 13:54:25 by spineda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(&str[s1_len], s2, s2_len + 1);
 	return (str);
 }
-
-// #include <stdio.h>
-
-// int main()
-// {
-// 	printf("\n%s\n\n",ft_strjoin("ABC", "DEF"));
-// }

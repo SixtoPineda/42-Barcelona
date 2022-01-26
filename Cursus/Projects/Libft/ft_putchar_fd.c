@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 22:13:05 by syxtyn            #+#    #+#             */
-/*   Updated: 2022/01/15 22:13:05 by syxtyn           ###   ########.fr       */
+/*   Created: 2022/01/25 13:54:19 by spineda-          #+#    #+#             */
+/*   Updated: 2022/01/25 13:54:25 by spineda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,3 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	ft_putchar_fd('c', 2);
-// 	return (0);
-// }

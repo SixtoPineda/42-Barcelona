@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 22:19:42 by syxtyn            #+#    #+#             */
-/*   Updated: 2022/01/15 22:19:42 by syxtyn           ###   ########.fr       */
+/*   Created: 2022/01/25 13:52:19 by spineda-          #+#    #+#             */
+/*   Updated: 2022/01/25 13:52:25 by spineda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 	Itera la lista ’lst’ y aplica la función ’f’ al
 	contenido de cada elemento.
 */
-
-#include <stdio.h>
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

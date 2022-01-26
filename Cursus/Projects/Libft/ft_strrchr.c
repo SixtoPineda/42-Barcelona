@@ -30,7 +30,7 @@ static int	check_val(int val)
 
 char	*ft_strrchr(const char *str, int ch)
 {
-	int	src_len;
+	int		src_len;
 
 	ch = check_val(ch);
 	src_len = 0;
@@ -39,11 +39,14 @@ char	*ft_strrchr(const char *str, int ch)
 	str = (str + (src_len - 1));
 	if (*(str + 1) == ch)
 		return ((char *)(str + 1));
-	while (*str)
+	while (*str && src_len > 0)
 	{
 		if (*str == ch)
 			return ((char *)str);
 		str--;
+		src_len--;
 	}
+	if (*str == ch)
+		return ((char *)str);
 	return (NULL);
 }

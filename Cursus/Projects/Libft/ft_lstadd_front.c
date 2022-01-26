@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 22:10:22 by syxtyn            #+#    #+#             */
-/*   Updated: 2022/01/15 22:10:22 by syxtyn           ###   ########.fr       */
+/*   Created: 2022/01/25 13:51:12 by spineda-          #+#    #+#             */
+/*   Updated: 2022/01/25 13:51:19 by spineda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,20 +32,3 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 		*lst = new;
 	}	
 }
-
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	t_list *list;
-// 	t_list *new;
-// 	list = ft_lstnew("hola");
-// 	int i = 25;
-// 	new = ft_lstnew(&i);
-
-// 	ft_lstadd_front(&list, new);
-
-// 	printf("%d\n", *((int*)(list->content)));
-// 	printf("%s\n", ((char*)(list->next->content)));
-// 	return (0);
-// }

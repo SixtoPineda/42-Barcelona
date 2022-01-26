@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 22:13:24 by syxtyn            #+#    #+#             */
-/*   Updated: 2022/01/15 22:13:24 by syxtyn           ###   ########.fr       */
+/*   Created: 2022/01/25 13:52:41 by spineda-          #+#    #+#             */
+/*   Updated: 2022/01/25 13:52:48 by spineda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,28 +32,3 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (current);
 }
-
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	t_list *list;
-// 	t_list *new;
-// 	t_list *last;
-// 	int i = 25;
-
-// 	//Create the two lists
-// 	list = ft_lstnew("hola");
-// 	new = ft_lstnew(&i);
-
-// 	ft_lstadd_front(&list, new); //add the new lits to list "list" 
-
-// 	printf("%d\n", *((int*)(list->content)));
-// 	printf("%s\n", ((char*)(list->next->content)));
-
-// 	//obtain last element of the list
-// 	last = ft_lstlast(list);
-// 	printf("%s\n", ((char*)(last->content)));
-
-// 	return (0);
-// }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 22:09:03 by syxtyn            #+#    #+#             */
-/*   Updated: 2022/01/15 22:09:03 by syxtyn           ###   ########.fr       */
+/*   Created: 2022/01/25 13:55:49 by spineda-          #+#    #+#             */
+/*   Updated: 2022/01/25 13:55:54 by spineda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-// #include <stdio.h>
-
-// void f(unsigned int i, char *c)
-// {
-// 	i = 0;
-// 	i++;
-// 	if (*c >= (int) 'a' && *c <= (int) 'z')
-// 		*c = *c - 32;
-// }
-
-// int		main(void)
-// {
-// 	char	str2[] = "abcde";
-// 	ft_striteri(str2, f);
-// 	printf("%s\n", str2);
-// 	return (0);
-// }

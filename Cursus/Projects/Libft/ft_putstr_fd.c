@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 22:20:22 by syxtyn            #+#    #+#             */
-/*   Updated: 2022/01/15 22:20:22 by syxtyn           ###   ########.fr       */
+/*   Created: 2022/01/25 13:55:17 by spineda-          #+#    #+#             */
+/*   Updated: 2022/01/25 13:55:20 by spineda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	ft_putstr_fd("hola", 2);
-// 	return (0);
-// }

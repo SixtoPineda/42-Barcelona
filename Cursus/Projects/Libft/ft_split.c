@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 22:22:09 by syxtyn            #+#    #+#             */
-/*   Updated: 2022/01/15 22:22:09 by syxtyn           ###   ########.fr       */
+/*   Created: 2022/01/25 13:55:30 by spineda-          #+#    #+#             */
+/*   Updated: 2022/01/25 13:55:35 by spineda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,32 +77,6 @@ static char	*get_string(int i, int final, char const *s)
 	return (str);
 }
 
-/* static char	**empty(char ***m, int i, int num_str)
-{
-	int	j;
-	int	k;
-
-	j = 0;
-	if (i == 0)
-	{
-		free(m[0]);
-	}
-	else
-	{
-		while (m[0][j])
-		{
-			k = 0;
-			while (m[0][j][k])
-			{
-				free(m[0][j][k++]);
-			}
-			free(m[0][j++]);
-		}
-		free(m[0]);
-	}
-	return (NULL);
-} */
-
 char	**ft_split(char const *s, char c)
 {
 	int		num_str;
@@ -131,13 +105,3 @@ char	**ft_split(char const *s, char c)
 	m[num_str++] = NULL;
 	return (m);
 }
-
-// #include <stdio.h>
-
-// int main()
-// {
-// 	char **s;
-// 	s = ft_split("  hola que tal  ", ' ');
-// 	if (s[2][3] == '\0')
-// 		printf("%s", s[2]);
-// }

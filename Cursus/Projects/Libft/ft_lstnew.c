@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: syxtyn <syxtyn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 22:06:47 by syxtyn            #+#    #+#             */
-/*   Updated: 2022/01/15 22:06:47 by syxtyn           ###   ########.fr       */
+/*   Created: 2022/01/25 13:53:19 by spineda-          #+#    #+#             */
+/*   Updated: 2022/01/25 13:53:24 by spineda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,3 @@ t_list	*ft_lstnew(void *content)
 	list->next = NULL;
 	return (list);
 }
-
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	t_list *list;
-// 	list = ft_lstnew("hola");
-// 	printf("%s\n", (char *)list->content);
-
-// 	int i = 25;
-// 	list->next = ft_lstnew(&i);
-// 	printf("%d\n", *((int*)(list->next->content)));
-// 	return (0);
-// }
